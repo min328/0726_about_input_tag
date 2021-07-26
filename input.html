@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input의 data속성</title>
+    <script>
+        function sendDataType(){
+            var dataType = document.getElementById("dataTest").value;
+            // var dataType = $("#dataType").val(); -- jQuery Style
+            console.log(dataType);
+            console.log("dataType 의 자료형은 " + typeof(dataType));
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <!-- <fieldset>
+            <legend>type="date"</legend>
+            <input type="date" id="dataTest" name="dataTest">
+        </fieldset>
+        <button type="button" onclick="sendDataType();">전송</button> -->
+        <fieldset style="display: flex;">
+            <legend>검색기간(type="date")</legend>
+            <div><input type="date"></div>
+            <div><span>~</span></div>
+            <div><input type="date"></div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>type="color"</legend>
+            <input type="color">
+        </fieldset>
+
+        <fieldset>
+            <legend>type="number"</legend>
+            <input id="dataTest" name="dataTest" type="number" max="10" min="1">
+        </fieldset>
+        <button type="button" onclick="sendDataType();">전송</button>
+        
+    </form>
+</body>
+</html>
