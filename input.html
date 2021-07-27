@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>input의 data속성</title>
+    <style>
+        fieldset {
+            width: 500px;
+        }
+    </style>
     <script>
         function sendDataType(){
             var dataType = document.getElementById("dataTest").value;
@@ -43,9 +48,31 @@
         </fieldset>
         <fieldset>
             <legend>type="range"</legend>
-            <input type="range" id="dataTest" name="dataTest">
+            <input type="range">
         </fieldset>
-        
+        <fieldset>
+            <legend>select-option</legend>
+            <select>
+                <option value="m1">menu1</option>
+                <option value="m2">menu2</option>
+                <option value="m3">menu3</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>textarea</legend>
+            <p>(탭 키로 줄 바꿔서 사용할 경우 공백으로 인식되니 태그를 무조건 한 줄안에 기입하자, 주의!)</p>
+            <textarea id="dataTest" name="dataTest" cols="30" rows="10">여기에 쓰여진 내용이 value값으로 입력</textarea>
+        </fieldset>
+        <fieldset>
+            <legend>label 알아보기</legend>
+            <h3>연령대</h3>
+            <!-- 글자를 클릭해도 라디오가 선택되기 위해서 label사용한 경우 -->
+            <label> 10대 <input type="radio" name="age"> </label>
+            20대 <input type="radio" name="age">
+            30대 <input type="radio" name="age">
+            40대 <input type="radio" name="age">
+            50대 <input type="radio" name="age">
+        </fieldset>
         <button type="submit">submit</button>
         <button type="button" onclick="sendDataType();">전송</button>
         
